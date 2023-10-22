@@ -14,6 +14,6 @@ let binarySearch=(arr,key)=>{
             left=middle+1
         }
     }
-    return false
+    return -1
 }
 console.log(binarySearch([1,2,3,4,5,6,7,10],10));
