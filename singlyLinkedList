@@ -1,0 +1,154 @@
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+class LinkedList {
+    constructor(head = null) {
+        this.head = head;
+        this.size = 0;
+    }
+    isEmpty() {
+        return this.size === 0;
+    }
+    getSize() {
+        return this.size;
+    }
+
+    //prepend
+    preppend(data) {
+        const node = new Node(data);
+        if (this.isEmpty()) {
+            this.head = node;
+            node.next = null;
+        } else {
+            node.next = this.head;
+            this.head = node;
+        }
+        this.size++;
+    }
+
+    //append
+    append(data) {
+        const node = new Node(data);
+        if (this.isEmpty()) {
+            this.head = node;
+        } else {
+            let current = this.head;
+            while (current.next) {
+                current = current.next;
+            }
+            current.next = node;
+        }
+        node.next = null;
+        this.size++
+    }
+    display() {
+        let current = this.head;
+        while (current) {
+            console.log(current.data);
+            current = current.next;
+        }
+        console.log("--------------------------")
+    }
+
+    //inset into position
+    insert(data, index) {
+        if (index < 0 || index >= this.size) {
+            return 'null'
+        }
+        if (index === 0) {
+            this.preppend(data);
+        } else {
+            const node = new Node(data);
+            let prev = this.head;
+            for (let i = 1; i < index; i++) {
+                prev = prev.next
+            }
+            node.next = prev.next;
+            prev.next = node;
+            this.size++;
+        }
+    }
+
+    //remove index
+    remove(index){
+        if(index < 0 || index >= this.size) {
+            return 'null'
+        }
+        if(index==0){
+            this.head = this.head.next;
+        }else{
+            let prev=this.head;
+            for(let i=1;i<index;i++){
+                prev = prev.next;
+            }
+            prev.next = prev.next.next;
+        }
+        this.size--
+    }
+
+    //remove value
+    removevalue(value){
+        if(this.isEmpty()){
+            console.log('empty list');
+            return
+        }
+        let prev=this.head;
+        if(prev.data==value){
+            this.head = this.head.next;
+        }else{
+            while(true){
+                prev = prev.next;
+                if(prev.next.data==value){
+                    prev.next = prev.next.next
+                    break;
+                }
+            }
+        }
+        this.size -- ;
+    }
+
+    //searching
+    search(key){
+        if(this.isEmpty()){
+            console.log('empty list');
+            return
+        }
+        let current=this.head;
+        for(let i=0;i<this.size;i++){
+            if(current.data==key){
+                return 'value  find at index '+i 
+            }
+            current=current.next;
+        }
+        return 'no such value'
+    }
+    
+    //reverse
+    reverse(){
+        if(this.isEmpty()){
+            console.log('empty list');
+            return
+        }
+        let current=this.head;
+        let prev = null
+        while(current){
+            let next=current.next
+            current.next = prev
+            prev = current; 
+            current = next
+        }
+        this.head = prev;
+    }
+}
+let list = new LinkedList();
+// list.append(10)
+// list.insert(50,1)
+// list.remove(0)
+// list.removevalue(10)
+// list.reverse();
+// list.display()
+// console.log(list.search(80))
+
