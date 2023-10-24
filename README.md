@@ -1,4 +1,4 @@
-#⚡️DSA Problems⚡️
+# ⚡DSA Problems⚡️
 
 Welcome to my DSA problems repository! 🚀
 
