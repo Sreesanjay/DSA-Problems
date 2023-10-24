@@ -126,7 +126,7 @@ class LinkedList {
         return 'no such value'
     }
     
-    //reverse
+    //reverse space - O(1) , time - O(n)
     reverse(){
         if(this.isEmpty()){
             console.log('empty list');
