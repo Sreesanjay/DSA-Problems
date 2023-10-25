@@ -3,7 +3,6 @@ let binarySearch=(arr,key)=>{
     let right=arr.length-1;
     while(left<=right){
         let middle=Math.floor((right+left)/2)
-        console.log(left,right,middle)
         if(arr[middle]==key) {
             return middle+1;
         }
