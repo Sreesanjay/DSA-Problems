@@ -11,8 +11,10 @@ This repository serves as a personal project to improve my problem-solving skill
 
 ## Topics
 The problems in this repository are organized by DSA topics, including but not limited to:
-- Arrays and Strings
+- Arrays 
+- Strings
 - Linked Lists
+- Stack
 - Trees and Graphs
 - Sorting and Searching
 - Dynamic Programming
