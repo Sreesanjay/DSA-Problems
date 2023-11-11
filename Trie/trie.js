@@ -1,5 +1,5 @@
 class Node{
-    constructor(data){
+    constructor(){
         this.children = {};
         this.isEndOfWord = false;
     }

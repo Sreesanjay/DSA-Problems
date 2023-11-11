@@ -29,7 +29,6 @@ class BST {
     }
     _isValid(node, minimum, maximum) {
         if(!node) return true;
-        console.log(node.data,minimum, maximum)
         if(node.data < minimum || node.data > maximum) return false;
         return (this._isValid(node.left, minimum, node.data) && this._isValid(node.right, node.data, maximum))
     }
