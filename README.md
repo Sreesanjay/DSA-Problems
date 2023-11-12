@@ -1,6 +1,6 @@
 #⚡️DSA Problems⚡️
 
-Welcome to my DSA problems repository! 🚀
+*Welcome to my DSA problems repository!* 🚀
 
 In this repository, you'll find a collection of solutions to various DSA problems in javascript that I've worked on.
 
