@@ -12,7 +12,7 @@ class Graph{
         this.adjMatrix[vertex2][vertex1] = 1;
     }
     deleteEdge(vertex1, vertex2){
-        if(vertex1 < 0 || vertex1 >= this.vertices || vertex2 < 0 || vertex2 >= this.vertices) return;
+        if(vertex1 < 0 || vertex1 >= this.vertices || vertex2 < 0 || vertex2 >= this.vertices) return; 
         this.adjMatrix[vertex1][vertex2] = 0;
         this.adjMatrix[vertex2][vertex1] = 0;
     }
